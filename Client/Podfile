@@ -1,0 +1,12 @@
+platform :ios, '11.0'
+
+target 'Jarvis' do
+  pod 'OneSignal', '>= 3.0.0', '< 4.0'
+  pod 'NotificationBannerSwift', '~> 3.0.0'
+  pod 'ClosureLayout', '~> 1.0.1'
+  pod 'KeychainAccess', '~> 4.2.2'
+end
+
+target 'OneSignalNotificationServiceExtension' do
+  pod 'OneSignal', '>= 3.0.0', '< 4.0'
+end

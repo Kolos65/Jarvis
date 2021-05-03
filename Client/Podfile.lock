@@ -1,0 +1,36 @@
+PODS:
+  - ClosureLayout (1.0.1)
+  - KeychainAccess (4.2.2)
+  - MarqueeLabel (4.0.5)
+  - NotificationBannerSwift (3.0.6):
+    - MarqueeLabel (~> 4.0.5)
+    - SnapKit (~> 5.0.1)
+  - OneSignal (3.1.1)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - ClosureLayout (~> 1.0.1)
+  - KeychainAccess (~> 4.2.2)
+  - NotificationBannerSwift (~> 3.0.0)
+  - OneSignal (< 4.0, >= 3.0.0)
+
+SPEC REPOS:
+  trunk:
+    - ClosureLayout
+    - KeychainAccess
+    - MarqueeLabel
+    - NotificationBannerSwift
+    - OneSignal
+    - SnapKit
+
+SPEC CHECKSUMS:
+  ClosureLayout: 9160154785103536edd1f23c7a251b8e6f27dad0
+  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
+  MarqueeLabel: 00cc0bcd087111dca575878b3531af980559707d
+  NotificationBannerSwift: 7021be2338f8f29cf424b0aca43da462bf9e2a1a
+  OneSignal: 33b0a463bb510db7c8e04fa6df70680ee0eb3d0f
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: 3f6a8ce3e102c19d0d94facc4ccdfdecbcd3e29f
+
+COCOAPODS: 1.10.0

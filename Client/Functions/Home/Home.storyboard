@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="1oO-5K-ayf">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Lfy-BO-7Bw" customClass="HomeViewController" customModule="Jarvis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lpt-Ws-nCh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="dl2-vy-sOz">
+                                <rect key="frame" x="16" y="44" width="382" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jSZ-wM-NDY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dl2-vy-sOz" firstAttribute="leading" secondItem="jSZ-wM-NDY" secondAttribute="leading" constant="16" id="1AC-Vo-LU5"/>
+                            <constraint firstItem="dl2-vy-sOz" firstAttribute="top" secondItem="jSZ-wM-NDY" secondAttribute="top" id="Rhk-gR-CCU"/>
+                            <constraint firstItem="jSZ-wM-NDY" firstAttribute="trailing" secondItem="dl2-vy-sOz" secondAttribute="trailing" constant="16" id="nFB-3V-yN6"/>
+                            <constraint firstItem="jSZ-wM-NDY" firstAttribute="bottom" secondItem="dl2-vy-sOz" secondAttribute="bottom" id="odT-uY-SmH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="dl2-vy-sOz" id="aOs-NZ-wJf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1DC-Yg-6v5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-322" y="54"/>
+        </scene>
+        <!--Camera Detail View Controller-->
+        <scene sceneID="Xb0-PW-IfD">
+            <objects>
+                <viewController storyboardIdentifier="CameraDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ay4-8p-eZf" customClass="CameraDetailViewController" customModule="Jarvis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XRb-dB-6Wo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2j-YY-M4N" customClass="BackButton" customModule="Jarvis" customModuleProvider="target">
+                                <rect key="frame" x="16" y="62" width="41" height="30"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="backButtonTouched:" destination="ay4-8p-eZf" eventType="touchUpInside" id="HQz-3w-XSp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cQp-8f-bcP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Z2j-YY-M4N" firstAttribute="top" secondItem="cQp-8f-bcP" secondAttribute="top" constant="18" id="5wc-TW-QtC"/>
+                            <constraint firstItem="Z2j-YY-M4N" firstAttribute="leading" secondItem="cQp-8f-bcP" secondAttribute="leading" constant="16" id="USc-h0-1uu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="Z2j-YY-M4N" id="aJe-KL-ctV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9yX-x2-znz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="394" y="54"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
