@@ -6,20 +6,20 @@ A Home Surveillance Face Recognition System
 The growing popularity of self-installable surveillance camera devices indicates, that commercially available, traditional home security systems became a less convenient deal for consumers due to their high monthly fees and installation cost. In this project, a secure face recognition equipped home surveillance system is proposed, that can be deployed on a cheap single board computer such as the Raspberry Pi.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Kolos65/Jarvis/master/screenshot1.png" width="800”  alt="Screenshot1" />
+    <img src="https://raw.githubusercontent.com/Kolos65/Jarvis/master/screenshot1.png" width="800"  alt="Screenshot1" />
 </p>
 
 The implemented system contains a two modules. The camera module uses **computer vision** algorithms to analyse the captured video frames in **real-time** and exposes the analysed data over a **REST API** implemented as a **Flask** server. The client is an **iOS application**, that is able to control the camera system, receive **push notifications** of detected events and display the live video feed of the camera.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Kolos65/Jarvis/master/screenshot2.png" width="800”  alt="Screenshot2" />
+    <img src="https://raw.githubusercontent.com/Kolos65/Jarvis/master/screenshot2.png" width="800"  alt="Screenshot2" />
 </p>
 
 
  ## Architecture
  Divided by functionality, the system can be split into three main components. The camera module is responsible for recording and processing frames from a physical camera device, in this case a **Raspberry Pi Camera V2**. The recorded raw frames are processed and analysed using **Python** and **OpenCV**, in order to recognize important security events such as **motion** or the **presence of an unknown face**.
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Kolos65/Jarvis/master/architecture.png" width="800”  alt="Architecture" />
+    <img src="https://raw.githubusercontent.com/Kolos65/Jarvis/master/architecture.png" width="800"  alt="Architecture" />
 </p>
 The server module implements a REST API, that is used by the mobile application to interfere with the camera and to display a live camera feed to the user. The client was implemented as an iOS application, and is responsible for displaying the raw video footage, accepting push notifications and implementing UI controls, that can modify the settings of the camera module.
 
@@ -28,7 +28,7 @@ The server module implements a REST API, that is used by the mobile application 
 Authentication was implemented using <a href="https://developer.apple.com/sign-in-with-apple/get-started/">Sign in with Apple</a>. After successful authentication, the server issues a new <a href="https://jwt.io/">JWT token</a> to the client, which is used in subsequent requests for authentication. The authentication flow is demonstrated on the following figure:
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Kolos65/Jarvis/master/signinapple.png" width="800”  alt="SignInApple" />
+    <img src="https://raw.githubusercontent.com/Kolos65/Jarvis/master/signinapple.png" width="800"  alt="SignInApple" />
 </p>
 
  ## Deployment
@@ -47,7 +47,7 @@ An example `.env` file would look like the following:
 
 ```dosini
 ONLY_VALID_EMAIL="email@example.com"
-APP_BUNDLE_ID=“com.example.bundleid"
+APP_BUNDLE_ID="com.example.bundleid"
 ISSUER="my-jarvis-server"
 JWT_SECRET_KEY="lkasdjfhlkdsjfhlksdjfh34827rwudzszxcgy78q3refo713"
 ONE_SIGNAL_APP_ID="alkefwho3827zuflufhgoqiuwzfglfgiqeuglfigflqiewu"
