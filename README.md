@@ -110,7 +110,7 @@ COPY ./ssl/ /etc/ssl/certs/nginx/
  ```bash
  docker build -t proxy .
  ```
-With the Docker images ready, we can now add a `docker-compose.yml` file, that will implement the necessarry configurations to deploy the Camera module with access to the Raspi camera and expose the Proxy server on localhost. The two images are deployed on the same Docker network so the proxy can redirect the requests to the Flask server.
+With the Docker images ready, we can now add a `docker-compose.yml` file, that will implement the necessarry configurations to deploy the Camera module with access to the camera device and expose the proxy server on the local network. The two images are deployed on the same Docker network so the proxy can redirect the requests to the Flask server.
 ```yaml
 version: '3.9'
 services:
@@ -165,4 +165,4 @@ where
 * **YOUR_ONESIGNAL_APP_ID** is the OneSignal App ID of your previously created OneSignal project
 If you wish, you can use the debug scheme to connect to your Raspberry Pi directly over the local network. In this case, change the HOST_URL to your local Raspberry Pi IP address in debug.xcconfig.
 
-With the iOS configuration done, **you can now build and run the app on your iOS device** and watch the live footage of your camera over a secure VPN tunnel.
+With the iOS configuration done, after running `pod install`, **you can now build and run the app on your iOS device** and watch the live footage of your camera over a secure VPN tunnel.
