@@ -129,5 +129,5 @@ def events():
     return { "events": results[offset:limit] }
     
 # Debug Server:
-app.run(host='0.0.0.0', port=3000, debug=False, threaded=True)
+# app.run(host='0.0.0.0', port=3000, debug=False, threaded=True)
 
