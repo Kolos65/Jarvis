@@ -65,8 +65,8 @@ def login():
 
 @app.route('/stream')
 def stream():
-    #if not Token.authenticate(request):
-    #    return Errors.unauthorized, 403
+    if not Token.authenticate(request):
+        return Errors.unauthorized, 403
     draw = request.args.get('draw', default=True, type=bool)
     mime = 'multipart/x-mixed-replace; boundary=frame'
     return Response(Camera.shared().stream(draw), mimetype=mime)
